@@ -1,15 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        double balance = 5000.00; // Initialize initial credit card balance of $5000
+        double interestRate = 17; // Initialize interest rate of 17% or 17/100
+        double interestOneMonth = balance * interestRate/100; // Calculate interest after one month by multiplying balance by interest rate
+        balance += interestOneMonth; // Add interest after one month to balance
+        double interestTwoMonths = interestOneMonth + (balance * interestRate/100); // Calculate interest after one month by multiplying the new balance by interest rate and adding that to interest after one month because interest is compounded
+        System.out.println("A credit card has an initial balance of $5000. The interest after one month is $"+interestOneMonth+" and the interest after two months is $"+interestTwoMonths);
     }
 }
